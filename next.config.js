@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 111,
     remotePatterns: [
       {
         hostname: "**.unsplash.com"

@@ -3,27 +3,29 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 111,
+    loader: "custom",
+    loaderFile: "./cloudinary.js",
     remotePatterns: [
       {
-        hostname: "**.unsplash.com"
-      }
-    ]
+        hostname: "**.unsplash.com",
+      },
+    ],
   },
   async headers() {
     return [
       {
-        source: '/isr',
+        source: "/isr",
         headers: [
           {
-            key: 'cache-control',
-            value: 'max-age=10, stale-while-revalidate=10',
+            key: "cache-control",
+            value: "max-age=10, stale-while-revalidate=10",
           },
         ],
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

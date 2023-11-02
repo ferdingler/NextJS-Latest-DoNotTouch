@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    formats: ['image/avif', 'image/webp', 'image/jpg'],
-    sizes: [128, 256, 512, 1024, 2048, 4096],
+    formats: ['image/avif', 'image/webp'],
+    imageSizes: [128, 256, 512, 1024, 2048, 4096],
     minimumCacheTTL: 111,
     remotePatterns: [
       {

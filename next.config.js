@@ -9,6 +9,9 @@ const nextConfig = {
     remotePatterns: [
       {
         hostname: "**.unsplash.com"
+      },
+      {
+        hostname: "**.lambda-url.us-west-2.on.aws"
       }
     ]
   },
